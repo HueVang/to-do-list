@@ -1,0 +1,26 @@
+h1 {
+  color: red;
+}
+
+.container {
+  height: 500px;
+  width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+.completed {
+  background-color: green;
+}
+
+.notCompleted {
+  background-color: gray;
+}
+
+li span {
+  color: white;
+}
+
+.complete, .delete {
+  float: right;
+}
