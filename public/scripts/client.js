@@ -41,7 +41,7 @@ function displayTasks(taskList) {
 
   taskList.forEach(function(obj) {
     var $li = $('<li></li>');
-    var $form = $('<form></form>');
+    var $form = $('<form class="tasks"></form>');
 
     $form.append('<span>' + obj.task + '</span>');
     $form.append('<button id="'+obj.id+'" class="complete">Complete</button>');
@@ -52,8 +52,9 @@ function displayTasks(taskList) {
       $form.addClass('notCompleted');
     };
 
-    $li.append($form);
-    $('#tasks').append($li);
+    $($li).append($form)
+    // $($li).appendTo('#tasks')
+    $($li).hide().appendTo('#tasks').fadeIn(1000);
   }); // end forEach function
 }; // end displayTasks function
 
